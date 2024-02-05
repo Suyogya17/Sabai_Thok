@@ -1,11 +1,12 @@
 import "./Login.css"
+import Logo from "../assets/Logo/logo.png"
 
 function Login () {
     return (
         <>
         <div className="main-div-login">
         <div className="side-design">
-
+            <img src={Logo} alt="" height="1000px" width="900px"/>
         </div>
         <div className="login-page-form-div">
             <h2>---  SIGN-IN  ---</h2>
