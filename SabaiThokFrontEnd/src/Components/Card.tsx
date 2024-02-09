@@ -23,6 +23,8 @@ function Card() {
         </div>
         <div className="productdiscription">
             <p>This is the image of the product and here is the discription</p>
+            <br />
+            <p>RS 12000</p>
         </div>
         <div className="bttntocart">
             <button>Add to Cart</button>
