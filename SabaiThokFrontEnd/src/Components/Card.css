@@ -1,5 +1,9 @@
 .cardbox{
     height: 30vh;
-    width: 50%;
+    width: 30%;
     background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
