@@ -30,6 +30,12 @@ const Navbar: React.FC = () => {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="#">Contact</a>
+          {/* <a href="/sign-up">
+            <button>Sign-Up</button>
+          </a>
+          <a href="/log-in">
+            <button>Sign-In</button>
+          </a> */}
         </div>
         <div className="navbar-toggle" onClick={handleToggleMenu}>
           <div className="bar"></div>
