@@ -3,6 +3,8 @@ import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login.tsx";
 import Registration from "./Pages/Registratioin.tsx";
 import About from "./Pages/About.tsx";
+import Account from "./Pages/Account.tsx";
+import AdminLogin from "./Pages/Admin/AdminLogin.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +23,14 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About/>,
   },
-  
+  {
+    path: "/account",
+    element: <Account/>,
+  },
+  {
+    path: "/admin-log-in",
+    element: <AdminLogin/>,
+  },
 
 ]);
 function App() {

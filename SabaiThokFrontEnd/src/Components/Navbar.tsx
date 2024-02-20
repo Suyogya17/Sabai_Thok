@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
         <div className={`navbar-links ${showMobileMenu ? 'show' : ''}`}>
           <a href="/">Home</a>
           <a href="/about">About</a>
-          <a href="#">Contact</a>
+          <a href="/Account">Account</a>
           {/* <a href="/sign-up">
             <button>Sign-Up</button>
           </a>

@@ -1,31 +1,35 @@
 package com.example.sabai_thok.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.example.sabai_thok.Dto.request.ItemRequest;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Setter
-@Getter
-@Entity
 @Table(name="items")
+@Entity
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Item {
     @Id
-    @SequenceGenerator(name = "item_seq_gen", sequenceName = "item_id_seq",allocationSize = 1)
-    @GeneratedValue(generator="item_seq_gen", strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name="item_Name", nullable = false, length = 255)
     private String itemName;
 
-    @Column(name="item_Image", nullable = false, length = 255)
-    private String itemImage;
+    private Integer availableQuantity;
 
-    @Column(name="item_Description", nullable = false, length = 255)
-    private String itemDescription;
+    private String description;
 
-    @Column(name="item_Quantity", nullable = false)
-    private Integer itemQuantity;
+    private Double price;
 
-    @Column(name="item_per_price", nullable = false)
-    private Integer itemPerPrice;
+    private String image;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="category_id", referencedColumnName = "id")
+    private Category categoryEntity;
 }

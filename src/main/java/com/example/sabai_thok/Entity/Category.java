@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryEntity {
+public class Category{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
